@@ -1,3 +1,12 @@
 # test_repository 
- 
-![image](https://user-images.githubusercontent.com/61121043/192359237-84794391-ab9c-46d1-9688-680e0915776a.png)
+PostgreSQL + smtp сервис + FTP сервис
+https://d1q6f0aelx0por.cloudfront.net/product-logos/library-postgres-logo.png 
+
+Сборка проекта
+$ docker-compose build
+
+Запуск проекта
+$ docker-compose up
+
+Останавливаем и удаляем контейнеры
+$ docker-compose down
