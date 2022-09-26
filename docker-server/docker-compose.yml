@@ -1,0 +1,32 @@
+version: '3'
+services:
+  mail:
+    image: bytemark/smtp
+    restart: always
+    environment:
+      RELAY_HOST: smtp.gmail.com
+      RELAY_PORT: 587
+      RELAY_USERNAME: yurov.mikhail@gmail.com
+      RELAY_PASSWORD: PlayLife55
+
+  db:
+    image: postgres:14.5
+    restart: always
+    environment:
+      POSTGRES_DB: "zaza"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "554455"
+    ports:
+      - 5432:5432
+
+
+  ftp:
+    image: stilliard/pure-ftpd
+    restart: always
+    environment:
+      FTP_USER_NAME: "admin"
+      FTP_USER_PASS: "554455"
+      FTP_USER_HOME: /home/ftpusers/admin
+
+
+  
